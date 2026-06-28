@@ -25,8 +25,7 @@ SECRET_KEY = 'django-insecure-&tt1^e=a89qch*ekj3hn0c8u31@bxlqjy(uh2z5wc-g3-olb=6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['*']  
 
 # Application definition
 
@@ -112,4 +111,14 @@ LOGIN_REDIRECT_URL = 'dashboard'
 LOGOUT_REDIRECT_URL = 'home'
 
 # Email backend for development testing (prints password reset emails to the console)
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+ 
+ import os
+
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
