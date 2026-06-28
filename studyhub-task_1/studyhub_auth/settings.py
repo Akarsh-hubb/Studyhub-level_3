@@ -113,7 +113,7 @@ LOGOUT_REDIRECT_URL = 'home'
 # Email backend for development testing (prints password reset emails to the console)
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
  
- import os
+import os
 
 STATIC_URL = '/static/'
 
