@@ -1,0 +1,13 @@
+/* Custom Footer Component Styles */
+.sh-footer {
+  background-color: var(--secondary);
+  color: #ffffff;
+  text-align: center;
+  padding: 24px 0;
+  margin-top: 48px;
+}
+
+.sh-footer-title {
+  margin-bottom: 16px;
+  font-weight: 700;
+}

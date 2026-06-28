@@ -1,0 +1,58 @@
+/* Custom Form Field Component Styles */
+.sh-form-group {
+  margin-bottom: 24px;
+}
+
+.sh-form-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+
+.sh-form-control {
+  display: block;
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--text);
+  background-color: var(--surface);
+  background-clip: padding-box;
+  border: 2px solid var(--secondary-border);
+  border-radius: var(--radius-sm);
+  transition: var(--transition-fast);
+  box-sizing: border-box;
+}
+
+.sh-form-control:focus {
+  color: var(--text);
+  background-color: var(--surface);
+  border-color: var(--primary);
+  outline: 0;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.sh-form-control-invalid {
+  border-color: var(--danger);
+}
+
+.sh-form-control-invalid:focus {
+  border-color: var(--danger);
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.15);
+}
+
+.sh-form-error {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--danger);
+  margin-top: 6px;
+}
+
+.sh-form-help {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-top: 6px;
+}

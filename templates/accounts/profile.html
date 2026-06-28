@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="sh-profile-header mb-4">
+    <div class="sh-card">
+        <div class="mb-3">
+            {% include 'components/avatar.html' with char=request.user.username|first|upper %}
+        </div>
+
+        <h2 class="fw-bold">
+            {{ request.user.username }}
+        </h2>
+
+        <p class="text-muted mb-0">
+            StudyHub Member
+        </p>
+    </div>
+</div>
+
+<div class="row g-4">
+    <div class="col-md-6">
+        <div class="sh-card">
+            <h5 class="fw-bold">Username</h5>
+            <p class="text-muted mb-0">
+                {{ request.user.username }}
+            </p>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="sh-card">
+            <h5 class="fw-bold">Account Status</h5>
+            <p class="text-success mb-0">
+                Active
+            </p>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="sh-card">
+            <h5 class="fw-bold">Email</h5>
+            <p class="text-muted mb-0">
+                {{ request.user.email|default:"Not Provided" }}
+            </p>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="sh-card">
+            <h5 class="fw-bold">Date Joined</h5>
+            <p class="text-muted mb-0">
+                {{ request.user.date_joined|date:"d M Y" }}
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="mt-4">
+    <div class="sh-card">
+        <h4 class="fw-bold mb-3">Account Security</h4>
+        <p class="mb-0 text-success">
+            Authentication System Active ✓
+        </p>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,91 @@
+/* Scoped CSS Modules styling for Button component */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: system-ui, -apple-system, sans-serif;
+  border-radius: 14px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
+  box-sizing: border-box;
+}
+
+/* Focus Outline State */
+.button:focus-visible {
+  outline: 3px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Button Sizes */
+.size-sm {
+  padding: 6px 16px;
+  font-size: 0.875rem;
+}
+
+.size-md {
+  padding: 10px 24px;
+  font-size: 1rem;
+}
+
+.size-lg {
+  padding: 14px 28px;
+  font-size: 1.125rem;
+}
+
+/* Button Variants */
+.variant-primary {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+}
+
+.variant-primary:hover:not([aria-disabled="true"]):not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.35);
+}
+
+.variant-primary:active:not([aria-disabled="true"]):not(:disabled) {
+  transform: translateY(0);
+}
+
+.variant-secondary {
+  background-color: #ffffff;
+  border-color: #d1d5db;
+  color: #111827;
+}
+
+.variant-secondary:hover:not([aria-disabled="true"]):not(:disabled) {
+  background-color: #f9fafb;
+  border-color: #9ca3af;
+}
+
+.variant-danger {
+  background-color: #dc3545;
+  color: #ffffff;
+}
+
+.variant-danger:hover:not([aria-disabled="true"]):not(:disabled) {
+  background-color: #bb2d3b;
+}
+
+.variant-warning {
+  background-color: #ffc107;
+  color: #111827;
+}
+
+.variant-warning:hover:not([aria-disabled="true"]):not(:disabled) {
+  background-color: #ffca2c;
+}
+
+/* Disabled States */
+.button:disabled,
+.button[aria-disabled="true"] {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}

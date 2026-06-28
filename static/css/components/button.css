@@ -1,0 +1,81 @@
+/* Custom Button Component Styles */
+.sh-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  padding: 10px 24px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  outline: none;
+  box-sizing: border-box;
+}
+
+/* Button Sizes */
+.sh-btn-lg {
+  padding: 14px 28px;
+}
+
+.sh-btn-sm {
+  padding: 6px 16px;
+  font-size: 0.875rem;
+}
+
+.sh-btn-block {
+  display: flex;
+  width: 100%;
+}
+
+/* Button Variants */
+.sh-btn-primary {
+  background: var(--primary-gradient);
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+}
+
+.sh-btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.35);
+  color: #ffffff !important;
+}
+
+.sh-btn-secondary {
+  background-color: transparent;
+  border-color: var(--secondary-border);
+  color: var(--text) !important;
+}
+
+.sh-btn-secondary:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+  border-color: #9ca3af;
+}
+
+.sh-btn-danger {
+  background-color: var(--danger);
+  border-color: var(--danger);
+  color: #ffffff !important;
+}
+
+.sh-btn-danger:hover {
+  background-color: #bb2d3b;
+  border-color: #b02a37;
+}
+
+.sh-btn-warning {
+  background-color: var(--warning);
+  border-color: var(--warning);
+  color: #111827 !important;
+}
+
+.sh-btn-warning:hover {
+  background-color: #ffca2c;
+  border-color: #ffc720;
+}
+
+/* Button Reset */
+button.sh-btn {
+  background-clip: padding-box;
+}

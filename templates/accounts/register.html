@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8">
+            <div class="sh-auth-container">
+                <div class="sh-card">
+                    <div class="sh-auth-header">
+                        <h1 class="fw-bold mb-2">Create Account 🚀</h1>
+                        <p class="text-muted">Join StudyHub and start your learning journey.</p>
+                    </div>
+
+                    {% if form.errors %}
+                        {% include 'components/alert.html' with type="danger" message="<strong>Registration Failed!</strong> Please check the fields below." dismissible=True %}
+                    {% endif %}
+
+                    <form method="POST">
+                        {% csrf_token %}
+
+                        {% include 'components/form_field.html' with type="text" name="username" label="Username" placeholder="Enter username" value=form.username.value|default:'' required=True error=form.username.errors.0 %}
+                        
+                        {% include 'components/form_field.html' with type="password" name="password1" label="Password" placeholder="Create password" required=True error=form.password1.errors.0 %}
+                        
+                        {% include 'components/form_field.html' with type="password" name="password2" label="Confirm Password" placeholder="Confirm password" required=True error=form.password2.errors.0 %}
+
+                        {% include 'components/button.html' with type="submit" text="Create Account" variant="success" class="sh-btn-block" %}
+                    </form>
+
+                    <hr class="my-4">
+
+                    <div class="sh-auth-footer">
+                        <p class="mb-0">
+                            Already have an account?
+                            <a href="/login/">
+                                Login Here
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

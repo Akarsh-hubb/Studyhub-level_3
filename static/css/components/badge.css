@@ -1,0 +1,38 @@
+/* Custom Badge Component Styles */
+.sh-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: var(--radius-xs);
+  box-sizing: border-box;
+}
+
+.sh-badge-success {
+  background-color: var(--success);
+  color: #ffffff;
+}
+
+.sh-badge-primary {
+  background-color: var(--primary);
+  color: #ffffff;
+}
+
+.sh-badge-warning {
+  background-color: var(--warning);
+  color: #111827;
+}
+
+.sh-badge-info {
+  background-color: var(--info);
+  color: #111827;
+}
+
+.sh-badge-pill {
+  border-radius: 999px;
+  padding: 8px 18px;
+}

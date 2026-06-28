@@ -1,0 +1,10 @@
+<div class="sh-alert sh-alert-{{ type|default:'info' }} {% if dismissible %}alert-dismissible fade show{% endif %}" role="alert">
+  <div>
+    {{ message|safe }}
+  </div>
+  {% if dismissible %}
+    <button type="button" class="sh-alert-close" data-bs-dismiss="alert" aria-label="Close">
+      &times;
+    </button>
+  {% endif %}
+</div>

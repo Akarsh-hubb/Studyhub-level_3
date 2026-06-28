@@ -1,0 +1,24 @@
+<div class="sh-form-group">
+  {% if label %}
+    <label class="sh-form-label" for="id_{{ name }}">{{ label }}</label>
+  {% endif %}
+  
+  <input
+    type="{{ type|default:'text' }}"
+    name="{{ name }}"
+    id="id_{{ name }}"
+    placeholder="{{ placeholder }}"
+    class="sh-form-control {% if error %}sh-form-control-invalid{% endif %}"
+    value="{{ value|default:'' }}"
+    {% if required %}required{% endif %}
+    {% if autocomplete %}autocomplete="{{ autocomplete }}"{% endif %}
+  >
+  
+  {% if error %}
+    <span class="sh-form-error">{{ error }}</span>
+  {% endif %}
+  
+  {% if help_text %}
+    <span class="sh-form-help">{{ help_text|safe }}</span>
+  {% endif %}
+</div>

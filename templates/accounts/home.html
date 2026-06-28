@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- Hero Section -->
+{% include 'components/hero.html' %}
+
+<!-- Features Section -->
+<div class="row g-4 mb-5">
+    <div class="col-md-4">
+        {% include 'components/feature_card.html' with title="Secure Authentication" text="Register, login and securely access your personal workspace." %}
+    </div>
+
+    <div class="col-md-4">
+        {% include 'components/feature_card.html' with title="Personal Dashboard" text="Manage your account through a clean and responsive dashboard." %}
+    </div>
+
+    <div class="col-md-4">
+        {% include 'components/feature_card.html' with title="Future Ready" text="Notes, goals and analytics modules will be added soon." %}
+    </div>
+</div>
+
+<!-- Why StudyHub -->
+<div class="mb-5">
+    <div class="sh-card">
+        <div class="sh-card-header">
+            <h3 class="sh-card-title">Why StudyHub?</h3>
+        </div>
+        <div class="sh-card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>✓ Secure Login System</p>
+                    <p>✓ Responsive Interface</p>
+                    <p>✓ Personalized Experience</p>
+                </div>
+                <div class="col-md-6">
+                    <p>✓ Modern UI Design</p>
+                    <p>✓ Component Based Architecture</p>
+                    <p>✓ Scalable Project Structure</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CTA Section -->
+<div class="sh-cta-section">
+    <h2 class="sh-cta-title">Ready To Start?</h2>
+    <p class="sh-cta-text">
+        Create your account and begin your StudyHub journey today.
+    </p>
+
+    {% if not user.is_authenticated %}
+        <div class="mt-3">
+            {% include 'components/button.html' with text="Create Account" href="/register/" variant="secondary" class="sh-btn-lg" %}
+        </div>
+    {% endif %}
+</div>
+
+{% endblock %}

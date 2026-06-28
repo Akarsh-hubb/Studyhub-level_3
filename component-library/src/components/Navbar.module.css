@@ -1,0 +1,167 @@
+/* Scoped CSS Modules styling for Navbar component */
+.navbar {
+  background: linear-gradient(135deg, #111827, #1f2937);
+  color: #ffffff;
+  padding: 14px 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  font-family: system-ui, -apple-system, sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.brandContainer a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.toggler {
+  display: none;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 8px;
+  outline: none;
+}
+
+.toggler:focus-visible {
+  outline: 2px solid #38bdf8;
+  border-radius: 4px;
+}
+
+.togglerIcon {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: currentColor;
+  position: relative;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.togglerIcon::before,
+.togglerIcon::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: currentColor;
+  transition: transform 0.2s ease-in-out;
+}
+
+.togglerIcon::before {
+  top: -6px;
+}
+
+.togglerIcon::after {
+  bottom: -6px;
+}
+
+.open {
+  background-color: transparent !important;
+}
+
+.open::before {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.open::after {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.link:hover {
+  color: #38bdf8;
+}
+
+.link:focus-visible {
+  outline: 2px solid #38bdf8;
+}
+
+.activeLink {
+  color: #38bdf8 !important;
+  font-weight: 600;
+}
+
+.rightContent {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+@media (max-width: 991px) {
+  .toggler {
+    display: block;
+  }
+
+  .navLinks {
+    display: none;
+    width: 100%;
+    margin-top: 15px;
+    background: #1f2937;
+    padding: 20px;
+    border-radius: 15px;
+    flex-direction: column;
+    align-items: stretch;
+    box-sizing: border-box;
+  }
+
+  .openLinks {
+    display: flex;
+  }
+
+  .list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .link {
+    display: block;
+    padding: 10px 0;
+  }
+
+  .rightContent {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

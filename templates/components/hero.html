@@ -1,0 +1,18 @@
+<div class="sh-hero-section">
+  <div class="sh-hero-badge">📚 StudyHub Workspace</div>
+  <h1 class="sh-hero-title">
+    Build Better
+    <br>
+    Study Habits.
+  </h1>
+  <p class="sh-hero-subtitle">
+    A modern workspace for students to manage their learning journey, track goals, and stay productive.
+  </p>
+  
+  {% if not user.is_authenticated %}
+    <div class="sh-hero-buttons">
+      {% include 'components/button.html' with text="Get Started" href="/register/" variant="primary" class="sh-btn-lg" %}
+      {% include 'components/button.html' with text="Login" href="/login/" variant="secondary" class="sh-btn-lg" %}
+    </div>
+  {% endif %}
+</div>

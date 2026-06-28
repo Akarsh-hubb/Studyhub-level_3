@@ -1,0 +1,10 @@
+/* Profile Page Styles */
+.sh-profile-header {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.sh-profile-detail-label {
+  font-weight: 700;
+  margin-bottom: 4px;
+}

@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- Dashboard Header -->
+{% include 'components/page_header.html' with title="Welcome Back, "|add:request.user.username|add:" 👋" subtitle="Manage your account and explore StudyHub." %}
+
+<!-- Quick Actions -->
+<div class="row g-4 mb-5">
+    <div class="col-md-6 col-lg-3">
+        <div class="sh-card">
+            <h5 class="fw-bold">Profile</h5>
+            <p class="text-muted">
+                View and manage your account details.
+            </p>
+            <div class="mt-3">
+                {% include 'components/button.html' with text="Open Profile" href="/profile/" variant="secondary" class="sh-btn-sm" %}
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3">
+        <div class="sh-card">
+            <h5 class="fw-bold">Authentication</h5>
+            <p class="text-muted">
+                Secure login system is active.
+            </p>
+            <div class="mt-3">
+                {% include 'components/badge.html' with type="success" text="Active" %}
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3">
+        <div class="sh-card">
+            <h5 class="fw-bold">Dashboard</h5>
+            <p class="text-muted">
+                Your personal StudyHub workspace.
+            </p>
+            <div class="mt-3">
+                {% include 'components/badge.html' with type="primary" text="Running" %}
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3">
+        <div class="sh-card">
+            <h5 class="fw-bold">Future Modules</h5>
+            <p class="text-muted">
+                Notes, goals and analytics are coming soon.
+            </p>
+            <div class="mt-3">
+                {% include 'components/badge.html' with type="warning" text="Planned" %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Account Overview -->
+<div class="mb-5">
+    <div class="sh-card">
+        <div class="sh-card-header">
+            <h3 class="sh-card-title">Account Overview</h3>
+        </div>
+        <div class="sh-card-body">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <strong class="sh-profile-detail-label">Username</strong>
+                    <p class="text-muted mb-0">
+                        {{ request.user.username }}
+                    </p>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <strong class="sh-profile-detail-label">Status</strong>
+                    <p class="text-success mb-0">
+                        Active
+                    </p>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <strong class="sh-profile-detail-label">Authentication</strong>
+                    <p class="text-success mb-0">
+                        Verified Login
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- StudyHub Roadmap -->
+<div class="mb-5">
+    <div class="sh-card">
+        <div class="sh-card-header">
+            <h3 class="sh-card-title">StudyHub Roadmap</h3>
+        </div>
+        <div class="sh-card-body">
+            <div class="sh-roadmap-item">
+                <span>✅</span> <span>User Registration</span>
+            </div>
+
+            <div class="sh-roadmap-item">
+                <span>✅</span> <span>User Login</span>
+            </div>
+
+            <div class="sh-roadmap-item">
+                <span>✅</span> <span>Protected Dashboard</span>
+            </div>
+
+            <div class="sh-roadmap-item">
+                <span>✅</span> <span>User Profile</span>
+            </div>
+
+            <div class="sh-roadmap-item">
+                <span>⏳</span> <span>Notes Module</span>
+            </div>
+
+            <div class="sh-roadmap-item">
+                <span>⏳</span> <span>Goal Tracking</span>
+            </div>
+
+            <div class="sh-roadmap-item">
+                <span>⏳</span> <span>Learning Analytics</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,11 @@
+<div class="sh-card {{ class }}">
+  {% if title or subtitle %}
+    <div class="sh-card-header">
+      {% if title %}<h3 class="sh-card-title">{{ title }}</h3>{% endif %}
+      {% if subtitle %}<p class="sh-card-subtitle">{{ subtitle }}</p>{% endif %}
+    </div>
+  {% endif %}
+  <div class="sh-card-body">
+    {{ content|safe }}
+  </div>
+</div>

@@ -1,0 +1,59 @@
+/* Scoped CSS Modules styling for FormField component */
+.fieldGroup {
+  margin-bottom: 24px;
+  font-family: system-ui, -apple-system, sans-serif;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.requiredAsterisk {
+  color: #dc3545;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 1rem;
+  font-family: inherit;
+  border: 2px solid #d1d5db;
+  border-radius: 14px;
+  outline: none;
+  background-color: #ffffff;
+  color: #1f2937;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.inputError {
+  border-color: #dc3545;
+}
+
+.inputError:focus {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.15);
+}
+
+.errorMsg {
+  font-size: 0.85rem;
+  color: #dc3545;
+  margin-top: 4px;
+}
+
+.helperText {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-top: 4px;
+}
