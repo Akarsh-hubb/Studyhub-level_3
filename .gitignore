@@ -1,0 +1,5 @@
+**/node_modules/
+node_modules/
+studyhub-task_1/component-library/node_modules/
+*.sqlite3
+.DS_Store
