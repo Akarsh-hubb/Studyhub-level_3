@@ -1,4 +1,4 @@
-# 🚀 StudyHub - Performance Optimization (Level 3 Task 2)
+# 🚀 StudyHub - Performance Optimization (Level 3 Task 1)
 
 A Django-based StudyHub application optimized for performance as part of the **Codveda Technologies Web Development Internship (Level 3 - Task 2)**.
 
