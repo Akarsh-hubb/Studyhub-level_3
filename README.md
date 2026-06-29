@@ -156,8 +156,6 @@ http://127.0.0.1:8000/
 **Akarsh Gupta**
 
 - GitHub: https://github.com/Akarsh-hubb
-- LinkedIn: https://www.linkedin.com/in/akarsh-gupta
-
----
+- LinkedIn: https://www.linkedin.com/in/akarsh-gupta-675497272
 
 ⭐ If you like this project, consider giving it a Star!
