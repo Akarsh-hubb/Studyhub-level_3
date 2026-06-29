@@ -1,0 +1,65 @@
+/* Import Modular Stylesheets */
+@import url("layout.570a6313a4ec.css");
+@import url("utilities.96ada65071e3.css");
+@import url("components/navbar.73d417c2c955.css");
+@import url("components/footer.6f82cc7ce6be.css");
+@import url("components/button.4a3fda2ee47a.css");
+@import url("components/card.5f96276f412a.css");
+@import url("components/form.7fe9b6f8dd72.css");
+@import url("components/alert.abd8361e48ce.css");
+@import url("components/badge.5698ebaa91c6.css");
+@import url("components/avatar.e7c8e64e5b65.css");
+@import url("components/hero.e496880c8fff.css");
+@import url("pages/home.52bc94f49e57.css");
+@import url("pages/dashboard.3b72e57f043c.css");
+@import url("pages/profile.6ea276a934ca.css");
+@import url("pages/auth.fa70d27ce388.css");
+
+/* Design Tokens & Root Variables */
+:root {
+  /* Colors */
+  --primary: #3b82f6;
+  --primary-gradient: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  --secondary: #111827;
+  --secondary-border: #d1d5db;
+  --background: #f8f9fa;
+  --surface: #ffffff;
+  --text: #111827;
+  --text-muted: #6b7280;
+  
+  --success: #198754;
+  --danger: #dc3545;
+  --warning: #ffc107;
+  --info: #0dcaf0;
+  
+  --nav-bg: linear-gradient(135deg, #111827, #1f2937);
+  --nav-accent: #38bdf8;
+  
+  /* Dimensions & Spacing */
+  --radius-lg: 24px;
+  --radius-md: 20px;
+  --radius-sm: 14px;
+  --radius-xs: 8px;
+  
+  /* Elevation & Shadows */
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.12);
+  --navbar-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  
+  /* Animations */
+  --transition: all 0.3s ease;
+  --transition-fast: all 0.2s ease;
+}
+
+/* Global Reset overrides */
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,15 @@
+/* Authentication Pages Styles (Login, Register, Password Reset) */
+.sh-auth-container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.sh-auth-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sh-auth-footer {
+  text-align: center;
+  margin-top: 24px;
+}

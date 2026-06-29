@@ -1,0 +1,12 @@
+/* General Layout Styles */
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+.section-spacing {
+  padding: 90px 0;
+}

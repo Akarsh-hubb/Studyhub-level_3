@@ -1,3 +1,6 @@
+{% load cache %}
+
+{% cache 86400 site_footer %}
 <footer class="sh-footer">
     <div class="container">
         <h3 class="sh-footer-title">
@@ -11,3 +14,4 @@
         </p>
     </div>
 </footer>
+{% endcache %}

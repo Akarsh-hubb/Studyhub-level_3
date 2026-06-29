@@ -1,0 +1,29 @@
+/* Home Page Layout Styles */
+.sh-cta-section {
+  padding: 90px 40px;
+  border-radius: 32px;
+  background: linear-gradient(
+    135deg,
+    #0f172a,
+    #1e293b,
+    #312e81
+  );
+  color: #ffffff;
+  margin-bottom: 50px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.sh-cta-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.sh-cta-text {
+  color: #cbd5e1;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}

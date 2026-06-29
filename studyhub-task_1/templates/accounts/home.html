@@ -1,11 +1,15 @@
 {% extends 'base.html' %}
+{% load cache %}
 
 {% block content %}
 
-<!-- Hero Section -->
-{% include 'components/hero.html' %}
+{% cache 3600 home_hero_section %}
+    {% include 'components/hero.html' %}
+{% endcache %}
 
-<!-- Features Section -->
+{% cache 3600 home_features_section %}
+<h2 class="visually-hidden">Our Features</h2> 
+
 <div class="row g-4 mb-5">
     <div class="col-md-4">
         {% include 'components/feature_card.html' with title="Secure Authentication" text="Register, login and securely access your personal workspace." %}
@@ -19,12 +23,13 @@
         {% include 'components/feature_card.html' with title="Future Ready" text="Notes, goals and analytics modules will be added soon." %}
     </div>
 </div>
+{% endcache %}
 
-<!-- Why StudyHub -->
+{% cache 3600 home_why_section %}
 <div class="mb-5">
     <div class="sh-card">
         <div class="sh-card-header">
-            <h3 class="sh-card-title">Why StudyHub?</h3>
+            <h2 class="sh-card-title">Why StudyHub?</h2>
         </div>
         <div class="sh-card-body">
             <div class="row">
@@ -42,8 +47,8 @@
         </div>
     </div>
 </div>
+{% endcache %}
 
-<!-- CTA Section -->
 <div class="sh-cta-section">
     <h2 class="sh-cta-title">Ready To Start?</h2>
     <p class="sh-cta-text">
